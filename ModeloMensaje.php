@@ -11,9 +11,9 @@ class ModeloMensaje  {
     $dbname = "tutofox";
 
     /* crear la conexión */
-    $conexion = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname); //cambie la variable $conexionn por la variable $conn, ya que es la que se esta utilizando para la consulta en las lineas 16 y 17
     /* comprobar la conexión */
-    if ($conn->connect_error) {
+    if ($conn->connect_error) { 
         die("Falló la conexión:: " . $conn->connect_error);
     }
     else
